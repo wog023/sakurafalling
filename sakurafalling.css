@@ -1,6 +1,6 @@
 body{
-	width: 100%;
-	height: 950px;
+	width: 100vw;
+	height: 100vh;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -13,7 +13,7 @@ body{
 	width: 100%;
 	height: 100%;
 	display: flex;
-	background: rgba(255,255,255,0.5);
+	background: rgba(255, 255, 255, 0.67);
 }
 .bg1{
 
@@ -26,105 +26,54 @@ body{
 	background: radial-gradient(#333,#000);
 	color: white;
 }
-.hana{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	box-shadow: 0 0 5px 	#FFAAD5;
-}
-.hana div{
-	position: absolute;
-	display: block;
-}
-.hanabira1{
-	width: 100px;
-}
-.hanabira2{
-	width: 300px;
-}
 
-.hana div:nth-child(1){
-	animation: animate 13s linear infinite;
-}
-.hana div:nth-child(2){
-	left: 20%;
-	animation: animate 10s linear infinite;
-	animation-delay: -5s;
-}
-.hana div:nth-child(3){
-	left: 40%;
-	animation: animate 13s linear infinite;
-	animation-delay: -7s;
-}
-.hana div:nth-child(4){
-	left: 10%;
-	animation: animate 10s linear infinite;
-	animation-delay: -3s;
-}
-.hana div:nth-child(5){
-	left: 50%;
-	animation: animate 20s linear infinite;
-}
-.hana div:nth-child(6){
-	left: 90%;
-	animation: animate 15s linear infinite;
-	animation-delay: -7s;
-}
-@keyframes animate{
-	0%{
-		top: -10%;
-		opacity: 0;
-	}
-	30%{
-		opacity: 0.8;
-		transform: translateX(-30px) rotate(60deg);
-	}
-	60%{
-		opacity: 0;
-		transform: translateX(50px) rotate(0deg);
-
-	}
-	100%{
-		top: 110%;
-		opacity: 0.8;
-        transform: translateX(20px) rotate(-45deg);
-
-	}
-}
-.hana2{
-	transform: scale(1.5) rotateY(180deg);
-	filter: blur(2px);
-	z-index: 2;
-}
 .word{
-	width: 60%;
-	height: 80%;
-	background-color:rgba(10,10,10,0.4);
+	width: max(60%,800px);
+	height: 70%;
+	background-color: rgb(255, 255, 255);
 	margin: auto;
 	z-index: 1;
-	color: white;
+	color: #383838;
 	display: flex;
 	border-radius: 5px;
+	position: relative;
+	box-shadow: 0px 0px 20px #00000042;
+}
+.word:after{
+	content: "";
+	width: 98%;
+	height: 98%;
+	position: absolute;
+	border: 3px solid #18400a6e;
+	top: 1%;
+	left: 1%;
+	box-sizing: border-box;
+	border-radius: 3px;
 
 }
+
+
 .word h1{
 	writing-mode: vertical-rl;
 	-webkit-writing-mode: vertical-rl;
 	display: block;
 	margin: auto;
-	font-size: 40px;
-	line-height: 200px;
-	
-	/*text-align: left;*/
-	height: 80%;
-	font-weight: bolder;
-	text-shadow: 1px 1px 10px rgba(10,10,10,0.4);
-font-family: 'Noto Serif JP', serif;
-	/*letter-spacing: 10px;*/
-	/*word-spacing: 50px;*/
-	column-width: 1000px;
+	font-size: 26px;
+	letter-spacing: 11px;
+	line-height: 600%;
+	font-family: 'Noto Serif JP', serif;
 }
+
+
+.hana{
+	position: absolute;
+	dsisplay: none;
+}
+
+
+
+
+
+
 
 /************word背景漸層，調花瓣，字特效****************************/
